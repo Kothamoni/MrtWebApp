@@ -1,6 +1,6 @@
 🚇 MRT Booking & Management System
 <div align="center">
-  <img src="Image/mrt_logo.png" alt="MRT App Logo" width="300">
+  <img src="Image/mrtapp.png" alt="MRT App Logo" width="300">
 </div>
 <br/>
 
