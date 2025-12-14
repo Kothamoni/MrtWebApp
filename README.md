@@ -20,7 +20,6 @@ MRT Booking & Management System is a modern urban transit platform designed to e
 - 📊 Database Models
 
 ---
-
 🚀 **Tools & Technologies**
 <p align="center">
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/> 
@@ -34,7 +33,6 @@ MRT Booking & Management System is a modern urban transit platform designed to e
 </p>
 
 ---
-
 📋 **Project Management**
 
 Version Control: Git & GitHub
@@ -218,7 +216,11 @@ Multi-tier notifications and alerts
 Mobile PWA version for offline usage
 
 📄 License
-
 MIT License
+# MRT Booking & Management System
 
-<div align="center"> <p><strong>MRT Booking & Management System</strong></p> <p>Smart • Fast • Reliable Public Transport</p> <p>Built with ❤️ for Bangladesh</p> <p><em>Bangladesh University of Professionals</em></p> <p><em>Department of ICT</em></p> </div> ```
+**Smart • Fast • Reliable Public Transport**  
+Built with ❤️ for Bangladesh  
+
+*Bangladesh University of Professionals*  
+*Department of ICT*
