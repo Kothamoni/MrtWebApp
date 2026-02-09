@@ -65,3 +65,6 @@ mongoose.connect(process.env.MONGO_URI)
   SSLC_STORE_PASSWD: process.env.SSLC_STORE_PASSWD,
   IS_LIVE: process.env.IS_LIVE,
 });
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
