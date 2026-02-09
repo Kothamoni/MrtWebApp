@@ -55,6 +55,8 @@
   </div>
 
   <script>
+    const BASE_URL = "https://mrtwebapp-production.up.railway.app";
+
     async function fetchUserProfile() {
       const token = localStorage.getItem("token");
       if (!token) {
