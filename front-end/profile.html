@@ -63,7 +63,7 @@
       }
 
       try {
-        const res = await fetch("http://localhost:3000/api/auth/me", {
+        const res = await fetch("https://mrtwebapp-production.up.railway.app/api/auth/me", {
           headers: { Authorization: "Bearer " + token }
         });
 
@@ -121,7 +121,7 @@
         submitBtn.textContent = "Saving...";
 
         // Update phone
-        const phoneRes = await fetch("http://localhost:3000/api/auth/update-phone", {
+        const phoneRes = await fetch("https://mrtwebapp-production.up.railway.app/api/auth/update-phone", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -141,7 +141,7 @@
         }
 
         // Update email
-        const emailRes = await fetch("http://localhost:3000/api/auth/update-email", {
+        const emailRes = await fetch("https://mrtwebapp-production.up.railway.app/api/auth/update-email", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

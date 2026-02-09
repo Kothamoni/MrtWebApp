@@ -317,7 +317,7 @@
 
     try {
       // ✅ FIRST: fetch user info
-      const userRes = await fetch("http://localhost:3000/api/auth/me", {
+      const userRes = await fetch("https://mrtwebapp-production.up.railway.app/api/auth/me", {
         headers: { Authorization: "Bearer " + token },
       });
       if (!userRes.ok) throw new Error("Failed to fetch user info");
@@ -325,7 +325,7 @@
       if (!user.email) throw new Error("User email not found");
 
       // ✅ THEN: book ticket using user.email
-      const res = await fetch("http://localhost:3000/api/tickets/book", {
+      const res = await fetch("https://mrtwebapp-production.up.railway.app/api/tickets/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -364,7 +364,7 @@
   alert("🧾 Redirecting to payment gateway...");
   try {
     const amount = 100; // you should calculate this dynamically based on fare
-    const res = await fetch("http://localhost:3000/api/payment/initiate", {
+    const res = await fetch("https://mrtwebapp-production.up.railway.app/api/payment/initiate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: amount, method: "bKash" }),
@@ -393,7 +393,7 @@
       return;
     }
     try {
-      const res = await fetch('http://localhost:3000/api/auth/me', {
+      const res = await fetch('https://mrtwebapp-production.up.railway.app/api/auth/me', {
         headers: { 'Authorization': 'Bearer ' + token }
       });
       if (!res.ok) throw new Error('Failed to fetch user data');
