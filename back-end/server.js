@@ -10,22 +10,10 @@ app.use(express.json());
 // ROUTES
 const authRoutes = require("./routes/auth.routes");
 const ticketRoutes = require("./routes/ticket.routes");
-
 const emailRoutes = require('./routes/email');
 const otpRoutes = require('./routes/otp.routes');
-
-
-
-const emailRoutes = require('./routes/email');
-const otpRoutes = require('./routes/otp.routes');
-const paymentRoutes = require('./routes/payment.routes');
-
-
-
-
 const notificationRoutes = require('./routes/notification.routes');
 const historyRoutes = require('./routes/history.routes');
-
 const paymentRoutes = require('./routes/payment.routes');
 app.use('/api/payment', paymentRoutes);
 app.use('/api/auth', otpRoutes);
