@@ -4,9 +4,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
+
+const cors = require("cors");
 app.use(cors({
-    origin: "*"  // For now, allow all domains
+  origin: "*"
 }));
+
+
+
 app.use(express.json());
 
 // ROUTES

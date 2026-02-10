@@ -74,7 +74,8 @@
   </div>
 
   <script>
-    const BASE_URL = "https://mrtwebapp-production.up.railway.app";
+    const BASE_URL = "https://mrtwebapplication.onrender.com";
+
 
     // Modal logic
     document.getElementById('infoBtn').addEventListener('click', function () {
@@ -98,7 +99,7 @@
       const password = document.getElementById('password').value;
 
       try {
-        const res = await fetch('https://mrtwebapp-production.up.railway.app/api/auth/register', {
+        const res = await fetch('https://mrtwebapplication.onrender.com/api/auth/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, email, nid, phone, password, hasPass: false })

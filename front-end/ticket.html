@@ -141,7 +141,8 @@
   </div>
 
 <script>
-  const BASE_URL = "https://mrtwebapp-production.up.railway.app";
+  const BASE_URL = "https://mrtwebapplication.onrender.com";
+
 
   function setMinDate() {
     const dateInput = document.getElementById('tripDate');
@@ -319,7 +320,7 @@
 
     try {
       // ✅ FIRST: fetch user info
-      const userRes = await fetch("https://mrtwebapp-production.up.railway.app/api/auth/me", {
+      const userRes = await fetch("https://mrtwebapplication.onrender.com/api/auth/me", {
         headers: { Authorization: "Bearer " + token },
       });
       if (!userRes.ok) throw new Error("Failed to fetch user info");
@@ -327,7 +328,7 @@
       if (!user.email) throw new Error("User email not found");
 
       // ✅ THEN: book ticket using user.email
-      const res = await fetch("https://mrtwebapp-production.up.railway.app/api/tickets/book", {
+      const res = await fetch("https://mrtwebapplication.onrender.com/api/tickets/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -366,7 +367,7 @@
   alert("🧾 Redirecting to payment gateway...");
   try {
     const amount = 100; // you should calculate this dynamically based on fare
-    const res = await fetch("https://mrtwebapp-production.up.railway.app/api/payment/initiate", {
+    const res = await fetch("hhttps://mrtwebapplication.onrender.com/api/payment/initiate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: amount, method: "bKash" }),
@@ -395,7 +396,7 @@
       return;
     }
     try {
-      const res = await fetch('https://mrtwebapp-production.up.railway.app/api/auth/me', {
+      const res = await fetch('https://mrtwebapplication.onrender.com/api/auth/me', {
         headers: { 'Authorization': 'Bearer ' + token }
       });
       if (!res.ok) throw new Error('Failed to fetch user data');

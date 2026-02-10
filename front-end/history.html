@@ -18,7 +18,8 @@
   </div>
 
   <script>
-    const BASE_URL = "https://mrtwebapp-production.up.railway.app";
+    const BASE_URL = "https://mrtwebapplication.onrender.com";
+
 
     async function fetchHistory() {
       const token = localStorage.getItem("token");
@@ -28,7 +29,7 @@
       }
 
       try {
-        const res = await fetch("https://mrtwebapp-production.up.railway.app/api/history", {
+        const res = await fetch("https://mrtwebapplication.onrender.com/api/history", {
           headers: {
             Authorization: "Bearer " + token
           }
