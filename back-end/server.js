@@ -1,17 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 
 const app = express();
-
-const cors = require("cors");
-app.use(cors({
-  origin: "*"
-}));
-
-
-
+app.use(cors());
 app.use(express.json());
 
 // ROUTES
@@ -41,7 +34,6 @@ app.use('/api/auth', otpRoutes);
 
 app.use('/api/payment', paymentRoutes);
 app.use('/api/auth', otpRoutes);
-app.use('/api/email', emailRoutes);
 
 
 
@@ -71,7 +63,4 @@ mongoose.connect(process.env.MONGO_URI)
   SSLC_STORE_ID: process.env.SSLC_STORE_ID,
   SSLC_STORE_PASSWD: process.env.SSLC_STORE_PASSWD,
   IS_LIVE: process.env.IS_LIVE,
-});
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
 });
