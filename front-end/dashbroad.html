@@ -78,12 +78,12 @@
       <button onclick="toggleMenu()" class="text-4xl font-bold text-[#006a4e] hover:text-[#f42a41] transition">&times;</button>
     </div>
     <ul class="p-4 space-y-6 text-xl font-semibold">
-      <li><a href="/front-end/ticket.html" class="hover:text-[#006a4e] transition">🎟️ Purchase Ticket</a></li>
-      <li><a href="/front-end/checkfare.html" class="hover:text-[#006a4e] transition">💰 Check Fare</a></li>
-      <li><a href="/front-end/history.html" class="hover:text-[#006a4e] transition">📜 History</a></li>
-      <li><a href="/front-end/schedule.html" class="hover:text-[#006a4e] transition">🕓 Schedule</a></li>
-      <li><a href="/front-end/profile.html" class="hover:text-[#006a4e] transition">👤 Profile</a></li>
-      <li><a href="login.html" class="text-red-600 hover:text-red-800 transition">🚪 Logout</a></li>
+      <li><a href="/ticket.html" class="hover:text-[#006a4e] transition">🎟️ Purchase Ticket</a></li>
+      <li><a href="/checkfare.html" class="hover:text-[#006a4e] transition">💰 Check Fare</a></li>
+      <li><a href="/history.html" class="hover:text-[#006a4e] transition">📜 History</a></li>
+      <li><a href="/schedule.html" class="hover:text-[#006a4e] transition">🕓 Schedule</a></li>
+      <li><a href="/profile.html" class="hover:text-[#006a4e] transition">👤 Profile</a></li>
+      <li><a href="/login.html" class="text-red-600 hover:text-red-800 transition">🚪 Logout</a></li>
     </ul>
   </div>
 
@@ -113,7 +113,7 @@
       const token = localStorage.getItem('token');
       if (!token) {
         alert('Please login first.');
-        window.location.href = 'login.html';
+        window.location.href = '/login.html';
         return;
       }
       try {
@@ -128,7 +128,7 @@
         console.error(err);
         alert('Error loading user data. Please login again.');
         localStorage.removeItem('token');
-        window.location.href = 'login.html';
+        window.location.href = '/login.html';
       }
     }
 
