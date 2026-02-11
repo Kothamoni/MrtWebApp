@@ -70,11 +70,11 @@
       <button onclick="toggleMenu()" class="text-4xl font-bold text-[#006a4e] hover:text-[#f42a41] transition">&times;</button>
     </div>
     <ul class="p-4 space-y-6 text-xl font-semibold">
-      <li><a href="/front-end/ticket.html" class="hover:text-[#006a4e] transition">🎟️ Purchase Ticket</a></li>
-      <li><a href="/front-end/checkfare.html" class="hover:text-[#006a4e] transition">💰 Check Fare</a></li>
-      <li><a href="/front-end/history.html" class="hover:text-[#006a4e] transition">📜 History</a></li>
-      <li><a href="/front-end/schedule.html" class="hover:text-[#006a4e] transition">🕓 Schedule</a></li>
-      <li><a href="/front-end/profile.html" class="hover:text-[#006a4e] transition">👤 Profile</a></li>
+      <li><a href="ticket.html" class="hover:text-[#006a4e] transition">🎟️ Purchase Ticket</a></li>
+      <li><a href="checkfare.html" class="hover:text-[#006a4e] transition">💰 Check Fare</a></li>
+      <li><a href="history.html" class="hover:text-[#006a4e] transition">📜 History</a></li>
+      <li><a href="schedule.html" class="hover:text-[#006a4e] transition">🕓 Schedule</a></li>
+      <li><a href="profile.html" class="hover:text-[#006a4e] transition">👤 Profile</a></li>
       <li><a href="login.html" class="text-red-600 hover:text-red-800 transition">🚪 Logout</a></li>
     </ul>
   </div>
@@ -106,7 +106,7 @@
         return;
       }
       try {
-        const res = await fetch('http://localhost:3000/api/auth/me', {
+        const res = await fetch('/api/auth/me', {
           headers: { 'Authorization': 'Bearer ' + token }
         });
         if (!res.ok) throw new Error('Failed to fetch user data');
@@ -125,7 +125,7 @@
       const token = localStorage.getItem('token');
       if (!token) return;
       try {
-        const res = await fetch('http://localhost:3000/api/notifications', {
+        const res = await fetch('/api/notifications', {
           headers: { 'Authorization': 'Bearer ' + token }
         });
         if (!res.ok) throw new Error('Failed to fetch notifications');
@@ -168,7 +168,7 @@
       if (!confirm('Are you sure you want to delete this notification?')) return;
 
       try {
-        const res = await fetch(`http://localhost:3000/api/notifications/${notificationId}`, {
+        const res = await fetch(`/api/notifications/${notificationId}`, {
           method: 'DELETE',
           headers: { 'Authorization': 'Bearer ' + token }
         });

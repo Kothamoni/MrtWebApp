@@ -10,7 +10,7 @@
 
   <header class="flex justify-between items-center mb-10">
     <h1 class="text-4xl font-bold text-[#006a4e]">📜 Booking History</h1>
-    <a href="/front-end/dashbroad.html" class="text-xl bg-[#f42a41] text-white px-6 py-2 rounded-full hover:bg-red-700 transition">← Back to Dashboard</a>
+    <a href="/dashbroad.html" class="text-xl bg-[#f42a41] text-white px-6 py-2 rounded-full hover:bg-red-700 transition">← Back to Dashboard</a>
   </header>
 
   <div id="historyContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -25,7 +25,7 @@
       const token = localStorage.getItem("token");
       if (!token) {
         alert("⚠️ Please login first.");
-        return window.location.href = "/front-end/login.html";
+        return window.location.href = "/login.html";
       }
 
       try {
