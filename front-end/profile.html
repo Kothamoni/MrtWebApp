@@ -15,7 +15,7 @@
   <!-- Profile Card -->
   <div class="relative z-10 bg-white bg-opacity-95 p-10 rounded-2xl shadow-2xl w-full max-w-2xl">
     <!-- Close Button -->
-    <button onclick="window.location.href='/front-end/dashbroad.html'" class="absolute top-4 right-4 text-gray-600 hover:text-red-500 text-2xl">
+    <button onclick="window.location.href='/dashbroad.html'" class="absolute top-4 right-4 text-gray-600 hover:text-red-500 text-2xl">
       <i class="fas fa-times"></i>
     </button>
 
@@ -111,10 +111,10 @@
         return;
       }
 
-      // Simple phone regex (digits only, 10-15 length)
-      const phonePattern = /^[0-9]{10,15}$/;
+      // Simple phone regex (digits only, 11-12 length)
+      const phonePattern = /^[0-9]{11,12}$/;
       if (!phonePattern.test(phone)) {
-        alert("⚠️ Please enter a valid phone number (10-15 digits).");
+        alert("⚠️ Please enter a valid phone number (11-12 digits).");
         return;
       }
 
