@@ -19,7 +19,7 @@
       <div class="w-1/2 bg-gradient-to-tr from-[#006a4e] to-[#f42a41] text-white p-8 flex flex-col justify-center">
         <h2 class="text-4xl font-bold mb-4">Welcome!</h2>
         <p class="text-lg mb-8">Join our MRT app community. Already have an account?</p>
-        <a href="login.html" class="bg-white text-[#006a4e] py-3 px-6 rounded-full font-bold hover:bg-gray-200 transition text-center hover:-translate-y-1">Sign in</a>
+        <a href="/login.html" class="bg-white text-[#006a4e] py-3 px-6 rounded-full font-bold hover:bg-gray-200 transition text-center hover:-translate-y-1">Sign in</a>
       </div>
 
       <!-- Right Panel (Signup Form) -->
@@ -109,7 +109,7 @@
 
         if (res.ok) {
           alert('✅ Account created successfully! Please login.');
-          window.location.href = 'login.html';
+          window.location.href = '/login.html';
         } else {
           alert('❌ ' + data.msg);
         }

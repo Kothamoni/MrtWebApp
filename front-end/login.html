@@ -29,19 +29,19 @@
         </div>
          <!-- Forgot Password Link -->
         <div class="text-right mb-6">
-          <a href="forget-password.html" class="text-[#f42a41] hover:underline text-lg font-semibold">Forgot Password?</a>
+          <a href="/forget-password.html" class="text-[#f42a41] hover:underline text-lg font-semibold">Forgot Password?</a>
         </div>
         <button type="submit" class="w-full bg-[#f42a41] text-white py-4 text-2xl rounded-md hover:bg-red-700 transition duration-300 font-semibold">Login</button>
       </form>
 
       <p class="mt-6 text-center text-lg text-[#006a4e]">Don't have an account?
-        <a href="signup.html" class="text-[#f42a41] hover:underline text-2xl">Sign up</a>
+        <a href="/signup.html" class="text-[#f42a41] hover:underline text-2xl">Sign up</a>
 
       </p>
 
      </p>
      <p class="mt-2  ml-4 text-center text-lg text-[#006a4e]">Administrator Login
-      <a href="adminlogin.html"><img src="image/adminlogo.jpeg" class="rounded-lg ml-20 bg-white bg-opacity-90 shadow-2xl rounded-2xl"></a>
+      <a href="/adminlogin.html"><img src="image/adminlogo.jpeg" class="rounded-lg ml-20 bg-white bg-opacity-90 shadow-2xl rounded-2xl"></a>
      </p>
 
     </div>
@@ -86,7 +86,7 @@
         if (res.ok && data.token) {
           localStorage.setItem("token", data.token); // Store token
           alert("✅ Login successful!");
-          window.location.href = "dashbroad.html";
+          window.location.href = "/dashbroad.html";
         } else {
           alert("❌ " + (data.msg || "Login failed"));
         }

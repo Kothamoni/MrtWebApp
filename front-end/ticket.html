@@ -367,7 +367,7 @@
   alert("🧾 Redirecting to payment gateway...");
   try {
     const amount = 100; // you should calculate this dynamically based on fare
-    const res = await fetch("hhttps://mrtwebapplication.onrender.com/api/payment/initiate", {
+    const res = await fetch("https://mrtwebapplication.onrender.com/api/payment/initiate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: amount, method: "bKash" }),
@@ -392,7 +392,7 @@
     const token = localStorage.getItem('token');
     if (!token) {
       alert('Please login first.');
-      window.location.href = 'login.html';
+      window.location.href = '/login.html';
       return;
     }
     try {
